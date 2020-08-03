@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option go_package = "lilu.red/go-grpc-test/father";
+package father;
+
+message Info {
+  string name = 1;
+}

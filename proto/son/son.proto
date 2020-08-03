@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "lilu.red/go-grpc-test/son";
+package son;
+
+import "father/father.proto";
+
+service SonService {
+  rpc Insert (Info) returns (Info) {
+  }
+}
+
+message Info {
+  string id = 1; //auto set
+  string name = 2;
+  father.Info father = 3;
+}
