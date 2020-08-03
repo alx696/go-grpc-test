@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "lilu.red/go-grpc-test/father";
+option go_package = "github.com/alx696/go-grpc-test/father";
 package father;
 
 message Info {

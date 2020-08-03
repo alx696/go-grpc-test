@@ -6,7 +6,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	pb_son "lilu.red/go-grpc-test/son"
+	pb_son "github.com/alx696/go-grpc-test/son"
 )
 
 const (
@@ -19,8 +19,8 @@ type server struct{
 
 //实现Insert接口
 func (s *server) Insert(ctx context.Context, in *pb_son.Info) (*pb_son.Info, error) {
-	log.Println("增加" + in.Name)
-	return &pb_son.Info{Name: in.Name + "已经增加"}, nil
+	log.Println("增加:", in.Name)
+	return &pb_son.Info{Name: "你好" + in.Name}, nil
 }
 
 func main() {

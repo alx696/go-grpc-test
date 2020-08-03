@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"google.golang.org/grpc"
-	pb_son "lilu.red/go-grpc-test/son"
+	pb_son "github.com/alx696/go-grpc-test/son"
 )
 
 // TestTime 测试时间
@@ -28,5 +28,5 @@ func TestGrpc(t *testing.T) {
 	if err != nil {
 		log.Fatalf("调用失败: %v", err)
 	}
-	log.Printf("回复: %s", r.GetName())
+	log.Println("回复: ", r.GetName())
 }
